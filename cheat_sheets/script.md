@@ -30,10 +30,16 @@ $p.getControl(項目名).val();
 ```javascript
 $p.apiGet({
   id: サイトID,
-  done: (data) => { ... },
-  fail: (e) => { ... }
+  done: (data) => {
+    console.log(data);
+  },
+  fail: (e) => {
+    console.log(e);
+  }
 });
 ```
+
+- `サイトID`: 取得したいデータのサイトID
 
 **公式ドキュメント**
 
