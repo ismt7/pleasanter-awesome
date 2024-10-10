@@ -5,7 +5,7 @@
 ### 入力項目に値を設定
 
 ```javascript
-$p.set($p.getControl(項目名), 値);
+$p.set($p.getControl("項目名"), 値);
 ```
 - `項目名`: 入力項目のID(`NumA〜Z`や`DateA〜Z`など)
 - `値`: 設定したい値
