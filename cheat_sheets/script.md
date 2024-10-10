@@ -15,6 +15,16 @@ $p.set($p.getControl(項目名), 値);
 - [開発者向け機能：スクリプト：$p.set](https://pleasanter.org/ja/manual/script-set)
 - [開発者向け機能：スクリプト：$p.getControl](https://pleasanter.org/ja/manual/script-get-control)
 
+**ユースケース**
+
+<details><summary>状況を完了に更新</summary>
+
+```javascript
+$p.set($p.getControl("Status"), 900);
+```
+
+</details>
+
 ### 入力項目の値を取得
 
 ```javascript
