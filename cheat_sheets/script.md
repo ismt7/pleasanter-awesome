@@ -42,14 +42,18 @@ $p.getControl(項目名).val();
 ### 他サイトからデータを取得(フィルタなし)
 
 ```javascript
+const doneHandler = (data) => {
+  console.log(data);
+};
+
+const failHandler = (e) => {
+  console.log(e);
+};
+
 $p.apiGet({
   id: サイトID,
-  done: (data) => {
-    console.log(data);
-  },
-  fail: (e) => {
-    console.log(e);
-  }
+  done: doneHandler,
+  fail: failHandler
 });
 ```
 
@@ -62,25 +66,31 @@ $p.apiGet({
 ### 他サイトからデータを取得(フィルタ条件あり)
 
 ```javascript
+const data = {
+  View: {
+    ColumnFilterHash:{
+      Title: タイトルの値,
+      DateA: dateA,
+      NumA: () => $p.getControl(...).val(),
+      ...
+    }
+  },
+  TableType: 'Normal'
+};
+
+const doneHandler = (data) => {
+  console.log(data);
+};
+
+const failHandler = (e) => {
+  console.log(e);
+};
+
 $p.apiGet({
   id: サイトID,
-  data: {
-    View: {
-      ColumnFilterHash:{
-        Title: タイトルの値,
-        DateA: dateA,
-        NumA: () => $p.getControl(...).val(),
-        ...
-      }
-    },
-    TableType: 'Normal'
-  },
-  done: (data) => {
-    console.log(data);
-  },
-  fail: (e) => {
-    console.log(e);
-  }
+  data,
+  done: doneHandler,
+  fail: failHandler
 });
 ```
 
