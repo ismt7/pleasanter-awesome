@@ -16,11 +16,11 @@ const result = items.Get(サイトID);
 
 ```javascript
 const data = {
-    "View": {
-        "ColumnFilterHash": {
-            "Status": "[\"900\"]"
-        }
+  "View": {
+    "ColumnFilterHash": {
+      "Status": "[\"900\"]"
     }
+  }
 };
 
 const result = items.Get(サイトID, JSON.stringify(data));
