@@ -14,3 +14,14 @@ const result = items.Get(サイトID);
 
 - [開発者向け機能：サーバスクリプト：items.Get](https://pleasanter.org/ja/manual/server-script-items-get)
 
+```javascript
+const data = {
+    "View": {
+        "ColumnFilterHash": {
+            "Status": "[\"900\"]"
+        }
+    }
+};
+
+const result = items.Get(サイトID, JSON.stringify(data));
+```
