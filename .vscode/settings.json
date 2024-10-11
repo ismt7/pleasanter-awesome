@@ -1,4 +1,5 @@
 {
     "gitdoc.enabled": true,
-    "japanese-proofreading.textlint.丸かっこ（）": false
+    "japanese-proofreading.textlint.丸かっこ（）": false,
+    "japanese-proofreading.textlint.助詞の連続": true
 }

@@ -39,7 +39,7 @@ $p.getControl(項目名).val();
 
 ## 他サイトからデータを取得
 
-### 他サイトからデータを取得(フィルタなし)
+### 他サイトからデータを取得(フィルターなし)
 
 ```javascript
 const doneHandler = (data) => {
@@ -63,7 +63,7 @@ $p.apiGet({
 
 - [開発者向け機能：スクリプト：$p.apiGet](https://pleasanter.org/ja/manual/script-api-get)
 
-### 他サイトからデータを取得(フィルタ条件あり)
+### 他サイトからデータを取得(フィルター条件あり)
 
 ```javascript
 const data = {
