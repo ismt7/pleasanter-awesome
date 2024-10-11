@@ -1,5 +1,11 @@
 {
     "gitdoc.enabled": true,
     "japanese-proofreading.textlint.丸かっこ（）": false,
-    "japanese-proofreading.textlint.助詞の連続": true
+    "japanese-proofreading.textlint.助詞の連続": true,
+    "markdown.extension.toc.levels": "2..6",
+    "markdown.extension.toc.omittedFromToc": {
+        "cheat_sheets/server_script.md": ["## 目次"],
+        "cheat_sheets/script.md": ["## 目次"],
+        "cheat_sheets/javascript.md": ["## 目次"],
+    }
 }
