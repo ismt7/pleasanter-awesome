@@ -12,6 +12,7 @@
   - [キーを押し下げた時のイベント](#キーを押し下げた時のイベント)
 - [日付操作(Day.js編)](#日付操作dayjs編)
   - [ライブラリの読み込み](#ライブラリの読み込み)
+  - [ローカライズ](#ローカライズ)
 
 
 ## 入力項目の操作
@@ -158,3 +159,15 @@ HTML:
 **公式ドキュメント**
 
 - [Day.js](https://day.js.org/docs/en/installation/installation)
+
+### ローカライズ
+
+日本語ローカライズを設定する場合は、次のスクリプトを追加します。
+
+```javascript
+dayjs.locale('ja');
+```
+
+**公式ドキュメント**
+
+- [Changing locale globally - Day.js](https://day.js.org/docs/en/i18n/changing-locale)
