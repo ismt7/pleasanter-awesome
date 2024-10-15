@@ -10,6 +10,8 @@
   - [他サイトからデータを取得(フィルター条件あり)](#他サイトからデータを取得フィルター条件あり)
 - [イベント処理](#イベント処理)
   - [キーを押し下げた時のイベント](#キーを押し下げた時のイベント)
+- [日付操作(Day.js編)](#日付操作dayjs編)
+  - [ライブラリの読み込み](#ライブラリの読み込み)
 
 
 ## 入力項目の操作
@@ -133,3 +135,26 @@ $p.on("keydown", 監視項目, () => {
 **公式ドキュメント**
 
 - [開発者向け機能：スクリプト：$p.on](https://pleasanter.org/ja/manual/script-on)
+
+## 日付操作(Day.js編)
+
+### ライブラリの読み込み
+
+`管理 > テーブルの管理 > HTML`を開き次のスクリプトを追加します。
+
+| 項目名 | 値 | 備考 |
+| -- | -- | -- |
+| タイトル | `Day.js` | 名称は任意 |
+| 挿入位置 | `Header top` |
+| HTML | (後述の内容) |
+
+HTML:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/ja.js"></script>
+```
+
+**公式ドキュメント**
+
+- [Day.js](https://day.js.org/docs/en/installation/installation)
