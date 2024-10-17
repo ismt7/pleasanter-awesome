@@ -187,8 +187,8 @@ dayjs.locale('ja');
 
 ```javascript
 $p.setMessage("#Message", JSON.stringify({
-    Css: "alert-success",
-    Text: "メッセージ"
+  Css: "alert-success",
+  Text: "メッセージ"
 }));
 ```
 
@@ -196,8 +196,8 @@ $p.setMessage("#Message", JSON.stringify({
 
 ```javascript
 $p.setMessage("#Message", JSON.stringify({
-    Css: "alert-warning",
-    Text: "メッセージ"
+  Css: "alert-warning",
+  Text: "メッセージ"
 }));
 ```
 
@@ -205,7 +205,7 @@ $p.setMessage("#Message", JSON.stringify({
 
 ```javascript
 $p.setMessage("#Message", JSON.stringify({
-    Css: "alert-error",
-    Text: "メッセージ"
+  Css: "alert-error",
+  Text: "メッセージ"
 }));
 ```
