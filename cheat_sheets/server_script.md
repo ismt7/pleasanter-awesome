@@ -4,6 +4,8 @@
 
 - [例外処理](#例外処理)
 - [他サイトからデータを取得する](#他サイトからデータを取得する)
+- [HTTPリクエスト](#httpリクエスト)
+- [Slack](#slack)
 
 ## 例外処理
 
@@ -39,3 +41,24 @@ const data = {
 const result = items.Get(サイトID, JSON.stringify(data));
 ```
 
+## HTTPリクエスト
+
+## Slack
+
+```javascript
+const webhookUrl = "https://hooks.slack.com/xxxxxx";
+const data = {
+  username: "Pleasanter",
+  text: "テストメッセージです",
+};
+
+httpClient.RequestUri = webhookUrl;
+httpClient.Content = JSON.stringify(data);
+
+const response = httpClient.Post();
+if(httpClient.IsSuccess) {
+  context.Log('Success: ' + response);
+}else{
+  context.Log('Error: (' + httpClient.StatusCode + ')' + response);
+}
+```
