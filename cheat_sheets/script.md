@@ -15,6 +15,10 @@
 - [日付操作(Day.js編)](#日付操作dayjs編)
   - [ライブラリの読み込み](#ライブラリの読み込み)
   - [ローカライズ](#ローカライズ)
+- [メッセージ](#メッセージ)
+  - [成功](#成功)
+  - [警告](#警告)
+  - [エラー](#エラー)
 
 
 ## 入力項目の操作
@@ -174,3 +178,34 @@ dayjs.locale('ja');
 **公式ドキュメント**
 
 - [Changing locale globally - Day.js](https://day.js.org/docs/en/i18n/changing-locale)
+
+## メッセージ
+
+[開発者向け機能：スクリプト：$p.setMessage](https://pleasanter.org/ja/manual/script-set-message)
+
+### 成功
+
+```javascript
+$p.setMessage("#Message", JSON.stringify({
+    Css: "alert-success",
+    Text: "メッセージ"
+}));
+```
+
+### 警告
+
+```javascript
+$p.setMessage("#Message", JSON.stringify({
+    Css: "alert-warning",
+    Text: "メッセージ"
+}));
+```
+
+### エラー
+
+```javascript
+$p.setMessage("#Message", JSON.stringify({
+    Css: "alert-error",
+    Text: "メッセージ"
+}));
+```
