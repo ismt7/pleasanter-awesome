@@ -1,5 +1,7 @@
 # チートシート(サーバスクリプト)
 
+[開発者向け機能：サーバスクリプト](https://pleasanter.org/ja/manual/server-script)
+
 ## 目次
 
 - [例外処理](#例外処理)
