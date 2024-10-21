@@ -21,6 +21,7 @@
   - [成功](#成功)
   - [警告](#警告)
   - [エラー](#エラー)
+  - [クリア](#クリア)
 
 
 ## 入力項目の操作
@@ -229,4 +230,12 @@ $p.setMessage("#Message", JSON.stringify({
   Css: "alert-error",
   Text: "メッセージ"
 }));
+```
+
+### クリア
+
+[開発者向け機能：スクリプト：$p.clearMessage](https://pleasanter.org/ja/manual/script-clear-message)
+
+```javascript
+$p.clearMessage();
 ```
