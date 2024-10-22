@@ -26,8 +26,9 @@
 
 ## 項目一覧
 
-| 項目名 | ID |
-| -- | -- |
+| 項目名 | 期限付きテーブル | 記録テーブル |
+| -- | -- | -- |
+| ID | `IssueId` | `ResultId` |
 | 分類項目 | `ClassA` ~ `ClassZ` |
 | 数値項目 | `NumA` ~ `NumZ` |
 | 日付項目 | `DateA` ~ `DateZ` |
