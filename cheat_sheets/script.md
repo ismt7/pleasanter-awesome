@@ -52,7 +52,7 @@ $p.set($p.getControl("Status"), 900);
 ### 入力項目の値を取得
 
 ```javascript
-$p.getControl(項目名).val();
+$p.getControl("項目名").val();
 ```
 
 - `項目名`: 入力項目のID(`NumA〜Z`や`DateA〜Z`など)
