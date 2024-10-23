@@ -5,6 +5,7 @@
 ## 目次
 
 - [項目一覧](#項目一覧)
+- [プロセスボタンごとの処理分岐(ControlId)](#プロセスボタンごとの処理分岐controlid)
 - [例外処理](#例外処理)
 - [他サイトからデータを取得する](#他サイトからデータを取得する)
 - [HTTPリクエスト](#httpリクエスト)
@@ -19,6 +20,33 @@
 | 数値項目 | `NumA` ~ `NumZ` |
 | 日付項目 | `DateA` ~ `DateZ` |
 | 説明項目 | `DescriptionA` ~ `DescriptionZ` |
+
+## プロセスボタンごとの処理分岐(ControlId)
+
+プロセスボタンごとにサーバスクリプト側で処理を分岐させる場合、ControlIdを使用する。
+
+**if文**
+
+```javascript
+if(context.ControlId === "プロセスボタンID") {
+  // ここに処理を記述
+}
+```
+
+**switch文**
+
+```javascript
+switch(context.ControlId) {
+  case "プロセスボタンID1":
+    // ここに処理を記述
+    break;
+  case "プロセスボタンID2":
+    // ここに処理を記述
+    break;
+  default:
+    break;
+}
+```
 
 ## 例外処理
 
