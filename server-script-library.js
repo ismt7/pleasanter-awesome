@@ -101,8 +101,21 @@ function sendSlack(webhookUrl, channel, userName, message) {
   }
 }
 
+/**
+ * items.Getで取得したデータ(Object)を配列に変換
+ * @param {Object} items - items.Getで取得したデータ
+ */
+function convertObjectToArray(items) {
+  const result = [];
+  for (let i = 0; i < items.Count; i++) {
+    result.push(items[i]);
+  }
+  return result;
+}
+
 const $v = {
   formatDisplayDate,
   allContexts,
   sendSlack,
+  convertObjectToArray,
 }
