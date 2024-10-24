@@ -1,5 +1,6 @@
 /**
  * 日付を(YYYY/MM/DD形式に変換する)
+ * @param {Date} date - 日付
  **/
 function formatDisplayDate(date) {
   const year = date.getFullYear();
@@ -43,7 +44,33 @@ function allContexts() {
   context.Log("---------All Contexts[End]----------")
 }
 
+/**
+ * Slackにメッセージを送信
+ * @param {string} webhookUrl - SlackのWebhook URL
+ * @param {string} channel - Slackのチャンネル名
+ * @param {string} userName - Slackのユーザー名
+ * @param {string} message - 送信するメッセージ
+ */
+function sendSlack(webhookUrl, channel, userName,message) {
+  const data = {
+    channel: channel,
+    username: userName,
+    text: message,
+  };
+  
+  httpClient.RequestUri = webhookUrl;
+  httpClient.Content = JSON.stringify(data);
+  
+  const response = httpClient.Post();
+  if(httpClient.IsSuccess) {
+    context.Log('Success: ' + response);
+  }else{
+    context.Log('Error: (' + httpClient.StatusCode + ')' + response);
+  }
+}
+
 const $v = {
   formatDisplayDate,
   allContexts,
+  sendSlack,
 }
