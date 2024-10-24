@@ -51,10 +51,10 @@ function allContexts() {
  * @param {string} userName - Slackのユーザー名
  * @param {string} message - 送信するメッセージ
  */
-function sendSlack(webhookUrl, channel, userName,message) {
+function sendSlack(webhookUrl, channel, userName, message) {
   const data = {
-    channel: channel,
-    username: userName,
+    channel,
+    userName,
     text: message,
   };
   
