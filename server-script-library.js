@@ -3,6 +3,8 @@
  * @param {Date} date - 日付
  **/
 function formatDisplayDate(date) {
+  if (!date) throw new Error('日付が指定されていません');
+  
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, '0');
   const day = String(date.getDate()).padStart(2, '0');
@@ -52,16 +54,16 @@ function allContexts() {
  * @param {string} message - 送信するメッセージ
  */
 function sendSlack(webhookUrl, channel, userName, message) {
+  if (!webhookUrl) throw new Error('Webhook URLが指定されていません');
+  if (!channel) throw new Error('チャンネルが指定されていません');
+  if (!userName) throw new Error('ユーザー名が指定されていません');
+  if (!message) throw new Error('メッセージが指定されていません');
+
   const data = {
     channel,
     userName,
     text: message,
   };
-
-  if (!message) {
-    context.Error('メッセージが空です');
-    return;
-  }
   
   httpClient.RequestUri = webhookUrl;
   httpClient.Content = JSON.stringify(data);
