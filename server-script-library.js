@@ -57,6 +57,11 @@ function sendSlack(webhookUrl, channel, userName, message) {
     userName,
     text: message,
   };
+
+  if (!message) {
+    context.Error('メッセージが空です');
+    return;
+  }
   
   httpClient.RequestUri = webhookUrl;
   httpClient.Content = JSON.stringify(data);
