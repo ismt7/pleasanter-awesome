@@ -24,7 +24,7 @@
  */
 
 /**
- * 日付を(YYYY/MM/DD形式に変換する)
+ * 日付をYYYY/MM/DD形式に変換する
  * @param {Date} date - 日付
  **/
 function formatDisplayDate(date) {
