@@ -23,3 +23,27 @@ $v.formatDisplayDate(items.DateA);
 ```javascript
 $v.allContexts();
 ```
+
+## Slackにメッセージを送信する - sendSlack()
+
+Slackにメッセージを送信します。
+
+**パラメーター**
+
+| パラメーター名 | 説明 |
+| --- | --- |
+| webHookUrl | SlackのWebhook URL |
+| channel | チャンネル名 |
+| username | ユーザー名 |
+| message | メッセージ |
+
+**使用例1**
+
+```javascript
+const webHookUrl = "https://hooks.slack.com/...";
+const channel = "#general";
+const username = "Pleasanter";
+const message = "Hello, Slack!";
+
+$v.sendSlack(webHookUrl, channel, username, message);
+```
