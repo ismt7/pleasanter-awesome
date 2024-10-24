@@ -107,8 +107,8 @@ function sendSlack(webhookUrl, channel, userName, message) {
  */
 function convertObjectToArray(items) {
   const result = [];
-  for (let i = 0; i < items.Count; i++) {
-    result.push(items[i]);
+  for (let item of items) {
+    result.push(item);
   }
   return result;
 }
