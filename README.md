@@ -1,4 +1,4 @@
-# pleasanter-awesome
+# Pleasanter Awesome
 
 ## ライブラリ
 
