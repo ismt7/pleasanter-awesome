@@ -11,6 +11,7 @@
 - [プロセス制御](#プロセス制御)
 - [他サイトからデータを取得する](#他サイトからデータを取得する)
 - [HTTPリクエスト](#httpリクエスト)
+  - [Get](#get)
   - [Slack](#slack)
 
 ## 例外処理
@@ -97,6 +98,20 @@ const result = items.Get(サイトID, JSON.stringify(data));
 ```
 
 ## HTTPリクエスト
+
+### Get
+
+[開発者向け機能：サーバスクリプト：httpClient.Get](https://pleasanter.org/ja/manual/server-script-http-client-get)
+
+```javascript
+httpClient.RequestUri = 'https://servername/api/.....';
+const response = httpClient.Get();
+if(httpClient.IsSuccess) {
+    context.Log('Success: ' + response);
+}else{
+    context.Log('Error: (' + httpClient.StatusCode + ')' + response);
+}
+```
 
 ### Slack
 
