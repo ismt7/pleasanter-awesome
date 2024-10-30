@@ -77,6 +77,18 @@ $p.getControl("項目名").val();
 スクリプトからサーバースクリプトにデータを送信する方法です。
 
 ```javascript
+function sendToServer() {
+  const memo = prompt("メモを入力してください");
+
+  if (memo) {
+    if ($p.data.MainForm === undefined) {
+      $p.data.MainForm = {};
+    }
+
+    $p.data.MainForm.myMemo = memo;
+    $p.send("#Process_1");
+  }
+}
 ```
 
 ## 他サイトからデータを取得
