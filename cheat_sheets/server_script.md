@@ -12,6 +12,7 @@
 - [他サイトからデータを取得する](#他サイトからデータを取得する)
 - [HTTPリクエスト](#httpリクエスト)
   - [Get](#get)
+  - [Post](#post)
   - [Slack](#slack)
 
 ## 例外処理
@@ -110,6 +111,26 @@ if(httpClient.IsSuccess) {
     context.Log('Success: ' + response);
 }else{
     context.Log('Error: (' + httpClient.StatusCode + ')' + response);
+}
+```
+
+### Post
+
+[開発者向け機能：サーバスクリプト：httpClient.Post](https://pleasanter.org/ja/manual/server-script-http-client-post)
+
+```javascript
+const data = {
+  data1: 'abc',
+  data2: '123'
+}
+httpClient.RequestUri = 'https://servername/api/.....';
+httpClient.Content = JSON.stringify(data);
+let response = httpClient.Post();
+
+if(httpClient.IsSuccess) {
+  context.Log('Success: ' + response);
+}else{
+  context.Log('Error: (' + httpClient.StatusCode + ')' + response);
 }
 ```
 
