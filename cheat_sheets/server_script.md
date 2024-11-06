@@ -120,17 +120,17 @@ if(httpClient.IsSuccess) {
 
 ```javascript
 const data = {
-  data1: 'abc',
-  data2: '123'
+  data1: "abc",
+  data2: "123"
 }
-httpClient.RequestUri = 'https://servername/api/.....';
+httpClient.RequestUri = "https://servername/api/.....";
 httpClient.Content = JSON.stringify(data);
 let response = httpClient.Post();
 
 if(httpClient.IsSuccess) {
-  context.Log('Success: ' + response);
+  context.Log("Success: " + response);
 }else{
-  context.Log('Error: (' + httpClient.StatusCode + ')' + response);
+  context.Log("Error: (" + httpClient.StatusCode + ")" + response);
 }
 ```
 
