@@ -125,7 +125,7 @@ const data = {
 }
 httpClient.RequestUri = "https://servername/api/.....";
 httpClient.Content = JSON.stringify(data);
-let response = httpClient.Post();
+const response = httpClient.Post();
 
 if(httpClient.IsSuccess) {
   context.Log("Success: " + response);
